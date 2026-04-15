@@ -236,3 +236,13 @@ ix.command.Add("Spectate", {
         client:ConCommand("ulx spectate " .. Quote(who:GetPlayer():Nick()))
     end
 })
+
+ix.command.Add("Teleport", {
+    description = "Teleport a player to your aim position.",
+    arguments = {
+        ix.type.character
+    },
+    OnRun = function(self, client, who)
+        client:ConCommand("ulx teleport " .. Quote(who:GetPlayer():Nick()))
+    end
+})
